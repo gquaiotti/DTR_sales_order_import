@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.757
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "datatrax_xml_import", "datatrax_xml_import.dtproj", "{F43D0FBF-49D1-4A2D-95AB-ABE03A844C29}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F43D0FBF-49D1-4A2D-95AB-ABE03A844C29}.Development|Default.ActiveCfg = Development
+		{F43D0FBF-49D1-4A2D-95AB-ABE03A844C29}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {92BEA22F-A242-4A20-8A4A-8A5C1E26698D}
+	EndGlobalSection
+EndGlobal

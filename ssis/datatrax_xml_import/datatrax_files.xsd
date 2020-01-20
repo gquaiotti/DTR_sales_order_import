@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="nf">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="blocoa">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" maxOccurs="1" name="cnpjempmaster" type="xs:string" />
+              <xs:element minOccurs="0" maxOccurs="1" name="nomeempmaster" type="xs:string" />
+              <xs:element minOccurs="0" maxOccurs="1" name="cnpjemp" type="xs:string" />
+              <xs:element minOccurs="0" maxOccurs="1" name="nomeemp" type="xs:string" />
+              <xs:element minOccurs="0" maxOccurs="1" name="blocob">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0" name="arquivo" type="xs:string" />
+                    <xs:element minOccurs="0" name="dataent" type="xs:string" />
+                    <xs:element minOccurs="0" name="notafiscal" />
+                    <xs:element minOccurs="0" name="serienf" />
+                    <xs:element minOccurs="0" name="cliefor" type="xs:string" />
+                    <xs:element minOccurs="0" name="loja" type="xs:string" />
+                    <xs:element minOccurs="0" name="estadoref" />
+                    <xs:element minOccurs="0" name="dataemisnf" type="xs:string" />
+                    <xs:element minOccurs="0" name="vlrcontabil" type="xs:decimal" />
+                    <xs:element minOccurs="0" name="baseicms" />
+                    <xs:element minOccurs="0" name="icmstribut" />
+                    <xs:element minOccurs="0" name="icmsisento" />
+                    <xs:element minOccurs="0" name="icmsoutros" />
+                    <xs:element minOccurs="0" name="baseipi" />
+                    <xs:element minOccurs="0" name="ipitribut" />
+                    <xs:element minOccurs="0" name="ipiisento" />
+                    <xs:element minOccurs="0" name="ipioutros" />
+                    <xs:element minOccurs="0" name="observacao" type="xs:string" />
+                    <xs:element minOccurs="0" name="desconto" />
+                    <xs:element minOccurs="0" name="icmsretido" />
+                    <xs:element minOccurs="0" name="icmscomplem" />
+                    <xs:element minOccurs="0" name="ipiobserv" />
+                    <xs:element minOccurs="0" name="baseicmsret" />
+                    <xs:element minOccurs="0" name="formproprio" />
+                    <xs:element minOccurs="0" name="especdocumen" />
+                    <xs:element minOccurs="0" name="despacess" />
+                    <xs:element minOccurs="0" name="datalanc" />
+                    <xs:element minOccurs="0" name="datacancel" />
+                    <xs:element minOccurs="0" name="icmsdiferido" />
+                    <xs:element minOccurs="0" name="icmobservacao" />
+                    <xs:element minOccurs="0" name="solidobservacao" />
+                    <xs:element minOccurs="0" name="icmsoolidtribut" />
+                    <xs:element minOccurs="0" name="credzfm" />
+                    <xs:element minOccurs="0" name="desczfm" />
+                    <xs:element minOccurs="0" name="basepisst" />
+                    <xs:element minOccurs="0" name="aliqpisst" />
+                    <xs:element minOccurs="0" name="vlrpisst" />
+                    <xs:element minOccurs="0" name="basecofst" />
+                    <xs:element minOccurs="0" name="aliqcofst" />
+                    <xs:element minOccurs="0" name="vlrcofst" />
+                    <xs:element minOccurs="0" name="nfeletron" />
+                    <xs:element minOccurs="0" name="chavenfe" />
+                    <xs:element minOccurs="0" name="valanticms" />
+                    <xs:element minOccurs="0" name="retsefaz" />
+                    <xs:element minOccurs="0" name="vlrestcreddeb" />
+                    <xs:element minOccurs="0" name="numrps" />
+                    <xs:element minOccurs="0" name="baseicmstranp" />
+                    <xs:element minOccurs="0" name="vlricmssttran" />
+                    <xs:element minOccurs="0" name="valorfecp" />
+                    <xs:element minOccurs="0" name="horanfe" />
+                    <xs:element minOccurs="0" name="vlrreint" />
+                    <xs:element minOccurs="0" name="basereint" />
+                    <xs:element minOccurs="0" name="protocolo" type="xs:string" />
+                    <xs:element minOccurs="0" name="vlrfecpdest" />
+                    <xs:element minOccurs="0" name="difalicms" />
+                    <xs:element minOccurs="0" name="basedifaldest" />
+                    <xs:element minOccurs="0" name="baseirrf" />
+                    <xs:element minOccurs="0" name="aliqirrf" />
+                    <xs:element minOccurs="0" name="vlrirrf" />
+                    <xs:element minOccurs="0" name="baseinss" />
+                    <xs:element minOccurs="0" name="aliqinss" />
+                    <xs:element minOccurs="0" name="vlrinss" />
+                    <xs:element minOccurs="0" name="basepisret" />
+                    <xs:element minOccurs="0" name="basecofret" />
+                    <xs:element minOccurs="0" name="basecsllret" />
+                    <xs:element minOccurs="0" name="vlrpisret" />
+                    <xs:element minOccurs="0" name="vlrcofret" />
+                    <xs:element minOccurs="0" name="aliqcsllret" />
+                    <xs:element minOccurs="0" name="pais" />
+                    <xs:element minOccurs="0" name="numpedido" type="xs:string" />
+                    <xs:element minOccurs="0" name="condpagamento" type="xs:string" />
+                    <xs:element minOccurs="0" name="condpagban" type="xs:string" />
+                    <xs:element minOccurs="0" name="tipopagamento" type="xs:string" />
+                    <xs:element minOccurs="0" name="datavenc1" />
+                    <xs:element minOccurs="0" name="valorparcela1" type="xs:decimal" />
+                    <xs:element minOccurs="0" name="tipoPagamento1" />
+                    <xs:element minOccurs="0" name="bandeira1" />
+                    <xs:element minOccurs="0" name="datavenc2" />
+                    <xs:element minOccurs="0" name="valorparcela2"  type="xs:decimal" />
+                    <xs:element minOccurs="0" name="tipoPagamento2" />
+                    <xs:element minOccurs="0" name="bandeira2" />
+                    <xs:element minOccurs="0" name="datavenc3" />
+                    <xs:element minOccurs="0" name="valorparcela3"  type="xs:decimal" />
+                    <xs:element minOccurs="0" name="tipoPagamento3" />
+                    <xs:element minOccurs="0" name="bandeira3" />
+                    <xs:element minOccurs="0" name="datavenc4" />
+                    <xs:element minOccurs="0" name="valorparcela4" type="xs:decimal" />
+                    <xs:element minOccurs="0" name="tipoPagamento4" />
+                    <xs:element minOccurs="0" name="bandeira4" />
+                    <xs:element minOccurs="0" name="natureza" />
+                    <xs:element minOccurs="0" name="tipo" type="xs:string" />
+                    <xs:element minOccurs="0" name="moeda" />
+                    <xs:element minOccurs="0" name="dataquit" />
+                    <xs:element minOccurs="0" name="dataini" type="xs:string" />
+                    <xs:element minOccurs="0" name="dataconcl" />
+                    <xs:element minOccurs="0" name="taxcode" />
+                    <xs:element minOccurs="0" name="datatrax" type="xs:string" />
+                    <xs:element minOccurs="0" name="flag" type="xs:string" />
+                    <xs:element minOccurs="0" name="worldpay_id" type="xs:string" />
+                    <xs:element minOccurs="0" maxOccurs="1" name="cliente">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element minOccurs="0" name="codCliente" type="xs:string" />
+                          <xs:element minOccurs="0" name="lojaCliente" type="xs:string" />
+                          <xs:element minOccurs="0" name="pessoaFisJur" type="xs:string" />
+                          <xs:element minOccurs="0" name="tipoCliente" type="xs:string" />
+                          <xs:element minOccurs="0" name="cnpjcpf" type="xs:string" />
+                          <xs:element minOccurs="0" name="razaoSocial" type="xs:string" />
+                          <xs:element minOccurs="0" name="endereco" type="xs:string" />
+                          <xs:element minOccurs="0" name="numero" type="xs:string" />
+                          <xs:element minOccurs="0" name="complemento" />
+                          <xs:element minOccurs="0" name="uf" type="xs:string" />
+                          <xs:element minOccurs="0" name="codMunicipio" type="xs:string" />
+                          <xs:element minOccurs="0" name="descMunicipio" type="xs:string" />
+                          <xs:element minOccurs="0" name="nomeEstado" type="xs:string" />
+                          <xs:element minOccurs="0" name="bairro" type="xs:string" />
+                          <xs:element minOccurs="0" name="cep" type="xs:string" />
+                          <xs:element minOccurs="0" name="email" type="xs:string" />
+                          <xs:element minOccurs="0" name="Telefone" type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element minOccurs="0" maxOccurs="1" name="clienteCob">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element minOccurs="0" name="enderecocob" type="xs:string" />
+                          <xs:element minOccurs="0" name="numerocob" type="xs:string" />
+                          <xs:element minOccurs="0" name="complementocob" />
+                          <xs:element minOccurs="0" name="ufcob" type="xs:string" />
+                          <xs:element minOccurs="0" name="codMunicipiocob" type="xs:string" />
+                          <xs:element minOccurs="0" name="descMunicipiocob" type="xs:string" />
+                          <xs:element minOccurs="0" name="nomeEstadocob" type="xs:string" />
+                          <xs:element minOccurs="0" name="bairrocob" type="xs:string" />
+                          <xs:element minOccurs="0" name="cepcob" type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element minOccurs="0" maxOccurs="1" name="clienteEnt">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element minOccurs="0" name="razaoSocial" type="xs:string" />
+                          <xs:element minOccurs="0" name="endereco" type="xs:string" />
+                          <xs:element minOccurs="0" name="numero" type="xs:string" />
+                          <xs:element minOccurs="0" name="complemento" type="xs:string" />
+                          <xs:element minOccurs="0" name="uf" type="xs:string" />
+                          <xs:element minOccurs="0" name="codMunicipio" type="xs:string" />
+                          <xs:element minOccurs="0" name="descMunicipio" type="xs:string" />
+                          <xs:element minOccurs="0" name="nomeEstado" type="xs:string" />
+                          <xs:element minOccurs="0" name="bairro" type="xs:string" />
+                          <xs:element minOccurs="0" name="cep" type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element minOccurs="0" name="numshipment" type="xs:string" />
+                    <xs:element minOccurs="0" name="tipofrete" type="xs:string" />
+                    <xs:element minOccurs="0" name="Transportadora1" type="xs:string"/>
+                    <xs:element minOccurs="0" name="ValorFrete1" type="xs:decimal" />
+                    <xs:element minOccurs="0" name="Transportadora2" type="xs:string"/>
+                    <xs:element minOccurs="0" name="ValorFrete2" type="xs:decimal"/>
+                    <xs:element minOccurs="0" name="Transportadora3" type="xs:string"/>
+                    <xs:element minOccurs="0" name="ValorFrete3" type="xs:decimal"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="blococ">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element minOccurs="0" name="nitem" type="xs:unsignedByte" />
+                          <xs:element minOccurs="0" maxOccurs="unbounded" name="blocod">
+                            <xs:complexType>
+                              <xs:sequence>
+                                  <xs:element minOccurs="0" name="codproduto" type="xs:string" />
+                                  <xs:element minOccurs="0" name="dataentrada" />
+                                  <xs:element minOccurs="0" name="dataemissao" />
+                                  <xs:element minOccurs="0" name="docfiscal" />
+                                  <xs:element minOccurs="0" name="serienf" />
+                                  <xs:element minOccurs="0" name="cliefor" type="xs:string" />
+                                  <xs:element minOccurs="0" name="codloja" type="xs:string" />
+                                  <xs:element minOccurs="0" name="estadoref" type="xs:string" />
+                                  <xs:element minOccurs="0" name="codfiscal" />
+                                  <xs:element minOccurs="0" name="codservico" />
+                                  <xs:element minOccurs="0" name="vlrcontabil" />
+                                  <xs:element minOccurs="0" name="aliqiss" />
+                                  <xs:element minOccurs="0" name="baseiss" />
+                                  <xs:element minOccurs="0" name="vlriss" />
+                                  <xs:element minOccurs="0" name="aliqicms" />
+                                  <xs:element minOccurs="0" name="baseicms" />
+                                  <xs:element minOccurs="0" name="vlricms" />
+                                  <xs:element minOccurs="0" name="vlrisenicms" />
+                                  <xs:element minOccurs="0" name="vlrouticms" />
+                                  <xs:element minOccurs="0" name="vlrbaseipi" />
+                                  <xs:element minOccurs="0" name="vlripi" />
+                                  <xs:element minOccurs="0" name="vlrisenipi" />
+                                  <xs:element minOccurs="0" name="vlroutipi" />
+                                  <xs:element minOccurs="0" name="vlrbaseicmsst" />
+                                  <xs:element minOccurs="0" name="vlricmscompl" />
+                                  <xs:element minOccurs="0" name="vlricmsdif" />
+                                  <xs:element minOccurs="0" name="vlricmsobs" />
+                                  <xs:element minOccurs="0" name="vlrsolidobs" />
+                                  <xs:element minOccurs="0" name="vlricmstribut" />
+                                  <xs:element minOccurs="0" name="datacancel" />
+                                  <xs:element minOccurs="0" name="crddebst" />
+                                  <xs:element minOccurs="0" name="contacontabil" />
+                                  <xs:element minOccurs="0" name="tipomov" />
+                                  <xs:element minOccurs="0" name="aliqipi" />
+                                  <xs:element minOccurs="0" name="sittributicms" />
+                                  <xs:element minOccurs="0" name="codtributicms" />
+                                  <xs:element minOccurs="0" name="vlrfrete" />
+                                  <xs:element minOccurs="0" name="vlrdespesas" />
+                                  <xs:element minOccurs="0" name="baseirrf" />
+                                  <xs:element minOccurs="0" name="aliqirrf" />
+                                  <xs:element minOccurs="0" name="vlrirrf" />
+                                  <xs:element minOccurs="0" name="baseinss" />
+                                  <xs:element minOccurs="0" name="aliqinss" />
+                                  <xs:element minOccurs="0" name="codncm" />
+                                  <xs:element minOccurs="0" name="stretisen" />
+                                  <xs:element minOccurs="0" name="stretoutros" />
+                                  <xs:element minOccurs="0" name="quantidade" type="xs:decimal" />
+                                  <xs:element minOccurs="0" name="precounit" type="xs:decimal" />
+                                  <xs:element minOccurs="0" name="vlrdesconto" />
+                                  <xs:element minOccurs="0" name="vlrtotal" type="xs:decimal" />
+                                  <xs:element minOccurs="0" name="peso" />
+                                  <xs:element minOccurs="0" name="basepis" />
+                                  <xs:element minOccurs="0" name="aliqpis" />
+                                  <xs:element minOccurs="0" name="vlrpis" />
+                                  <xs:element minOccurs="0" name="basecofins" />
+                                  <xs:element minOccurs="0" name="aliqcofins" />
+                                  <xs:element minOccurs="0" name="vlrcofins" />
+                                  <xs:element minOccurs="0" name="basecsll" />
+                                  <xs:element minOccurs="0" name="aliqcsll" />
+                                  <xs:element minOccurs="0" name="vlrcsll" />
+                                  <xs:element minOccurs="0" name="basepisst" />
+                                  <xs:element minOccurs="0" name="aliqpisst" />
+                                  <xs:element minOccurs="0" name="vlrpisst" />
+                                  <xs:element minOccurs="0" name="basecofst" />
+                                  <xs:element minOccurs="0" name="aliqcofst" />
+                                  <xs:element minOccurs="0" name="vlrcofst" />
+                                  <xs:element minOccurs="0" name="issret" />
+                                  <xs:element minOccurs="0" name="numrps" />
+                                  <xs:element minOccurs="0" name="cfps" />
+                                  <xs:element minOccurs="0" name="antecipicms" />
+                                  <xs:element minOccurs="0" name="vlranticms" />
+                                  <xs:element minOccurs="0" name="chavenfe" />
+                                  <xs:element minOccurs="0" name="margem" />
+                                  <xs:element minOccurs="0" name="sittribpis" />
+                                  <xs:element minOccurs="0" name="sittribcof" />
+                                  <xs:element minOccurs="0" name="pispauta" />
+                                  <xs:element minOccurs="0" name="cofinspauta" />
+                                  <xs:element minOccurs="0" name="ipipauta" />
+                                  <xs:element minOccurs="0" name="icmspauta" />
+                                  <xs:element minOccurs="0" name="icmsstpauta" />
+                                  <xs:element minOccurs="0" name="aliqicmssolid" />
+                                  <xs:element minOccurs="0" name="vlrfecp" />
+                                  <xs:element minOccurs="0" maxOccurs="unbounded" name="aliqfecp" />
+                                  <xs:element minOccurs="0" name="vlrfecst" />
+                                  <xs:element minOccurs="0" name="sittribiss" />
+                                  <xs:element minOccurs="0" name="horanfe" />
+                                  <xs:element minOccurs="0" name="desczonafranca" />
+                                  <xs:element minOccurs="0" name="natreceita" />
+                                  <xs:element minOccurs="0" name="codnatreceita" />
+                                  <xs:element minOccurs="0" name="grpnatreceira" />
+                                  <xs:element minOccurs="0" name="basepisret" />
+                                  <xs:element minOccurs="0" name="basecofinsret" />
+                                  <xs:element minOccurs="0" name="vlrpisret" />
+                                  <xs:element minOccurs="0" name="vlrcofret" />
+                                  <xs:element minOccurs="0" name="vlrcsllret" />
+                                  <xs:element minOccurs="0" name="aliqpisret" />
+                                  <xs:element minOccurs="0" name="aliqcofret" />
+                                  <xs:element minOccurs="0" name="aliqcsllret" />
+                                  <xs:element minOccurs="0" name="aliqcofmaj" />
+                                  <xs:element minOccurs="0" name="vlrcofmaj" />
+                                  <xs:element minOccurs="0" name="descicms" />
+                                  <xs:element minOccurs="0" name="agregavalor" />
+                                  <xs:element minOccurs="0" name="vlrreintegra" />
+                                  <xs:element minOccurs="0" name="basereintegra" />
+                                  <xs:element minOccurs="0" name="aliqpismaj" />
+                                  <xs:element minOccurs="0" name="vlrpismaj" />
+                                  <xs:element minOccurs="0" name="difalicms" />
+                                  <xs:element minOccurs="0" name="vlrfecpdest" />
+                                  <xs:element minOccurs="0" name="percdifaldest" />
+                                  <xs:element minOccurs="0" name="percdifalorig" />
+                                  <xs:element minOccurs="0" name="baseissret" />
+                                  <xs:element minOccurs="0" name="aliqissret" />
+                                  <xs:element minOccurs="0" name="vlrissret" />
+                                  <xs:element minOccurs="0" name="codnbs" />
+                                  <xs:element minOccurs="0" name="codoperacao" type="xs:string" />
+                                  <xs:element minOccurs="0" name="tes" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="clientName" type="xs:string" use="optional" />
+      <xs:attribute name="fileVersion" type="xs:decimal" use="optional" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

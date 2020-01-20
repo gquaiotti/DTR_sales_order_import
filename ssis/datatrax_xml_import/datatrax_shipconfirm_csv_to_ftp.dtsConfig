@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<DTSConfiguration>
+  <DTSConfigurationHeading>
+    <DTSConfigurationFileInfo GeneratedBy="BRQAMSSQL\brqamssql2" GeneratedFromPackageName="datatrax_shipconfirm_csv_to_ftp" GeneratedFromPackageID="{F618DB88-A783-4A4C-9157-36AC1A078DF8}" GeneratedDate="9/6/2019 9:04:27 AM"/>
+  </DTSConfigurationHeading>
+  <Configuration ConfiguredType="Property" Path="\Package.Variables[User::root_directory].Properties[Value]" ValueType="String">
+    <ConfiguredValue>D:\DATATRAX\</ConfiguredValue>
+  </Configuration>
+  <Configuration ConfiguredType="Property" Path="\Package.Variables[User::sftp_attempts].Properties[Value]" ValueType="Int32">
+    <ConfiguredValue>3</ConfiguredValue>
+  </Configuration>
+  <Configuration ConfiguredType="Property" Path="\Package.Variables[User::sftp_key].Properties[Value]" ValueType="String">
+    <ConfiguredValue></ConfiguredValue>
+  </Configuration>
+  <Configuration ConfiguredType="Property" Path="\Package.Variables[User::sftp_password].Properties[Value]" ValueType="String">
+    <ConfiguredValue></ConfiguredValue>
+  </Configuration>
+  <Configuration ConfiguredType="Property" Path="\Package.Variables[User::sftp_server].Properties[Value]" ValueType="String">
+    <ConfiguredValue></ConfiguredValue>
+  </Configuration>
+  <Configuration ConfiguredType="Property" Path="\Package.Variables[User::sftp_user].Properties[Value]" ValueType="String">
+    <ConfiguredValue></ConfiguredValue>
+  </Configuration>
+</DTSConfiguration>

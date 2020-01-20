@@ -1,0 +1,360 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="8/6/2019 11:24:54 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="BRQAMSSQL"
+  DTS:CreatorName="BRQAMSSQL\brqamssql2"
+  DTS:DTSID="{68F38235-C109-4465-A801-782A4AB0ECDC}"
+  DTS:EnableConfig="True"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.1100.123"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="datatrax_log_to_onedrive"
+  DTS:PackageType="5"
+  DTS:ProtectionLevel="0"
+  DTS:VersionBuild="9"
+  DTS:VersionGUID="{D79E63CC-ED40-4548-A836-163A9AA0356B}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Configurations>
+    <DTS:Configuration
+      DTS:ConfigurationString="D:\DATATRAX\ssis\datatrax_xml_import\datatrax_log_to_onedrive.dtsConfig"
+      DTS:ConfigurationType="1"
+      DTS:CreationName=""
+      DTS:DTSID="{5BC5D994-8A3A-48AE-8D76-C03EAE0718D2}"
+      DTS:ObjectName="datatrax_log_to_onedrive_config" />
+  </DTS:Configurations>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{37E9D698-8CB3-4752-A87D-5AAEC04D11B4}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="&quot;\&quot;&quot; + @[User::destination_root] + &quot;log\\&quot; + &quot;\&quot;&quot;"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="destination_log_folder">
+      <DTS:VariableValue
+        DTS:DataType="8">"d:\datatrax\onedrive_test\log\"</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{BA564ECE-7B97-4363-B838-5C1A3EEDEAB5}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="destination_root">
+      <DTS:VariableValue
+        DTS:DataType="8">d:\datatrax\onedrive_test\</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{F11AEB59-6DE0-43BB-972F-8F4826F01190}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="&quot;\&quot;&quot; + @[User::destination_root] + &quot;xml\\&quot; +  @[User::main_folder] + &quot;\\sftplog\\&quot; + &quot;\&quot;&quot;"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="destination_sfptlog_folder">
+      <DTS:VariableValue
+        DTS:DataType="8">"d:\datatrax\onedrive_test\xml\\sftplog\"</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{B2ACAC80-6C8D-4E28-847C-52587F6B3C68}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="log_file_name">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{297F01A1-9E59-4AC8-89C9-983FE8896777}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="main_folder">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{8263AE5E-0BF3-4791-872C-93E01D7A9238}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="root_directory">
+      <DTS:VariableValue
+        DTS:DataType="8">d:\datatrax\</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{1CFE04B1-55CA-465C-9A47-A23B26058DC1}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="@[User::root_directory] + &quot;xml\\&quot; +  @[User::main_folder] + &quot;\\sftplog\\&quot;"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="sftp_log_folder">
+      <DTS:VariableValue
+        DTS:DataType="8">d:\datatrax\xml\\sftplog\</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{79166871-32DB-4B31-B53D-A615443B848B}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="@[User::root_directory] + &quot;log\\&quot;"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="ssis_log_folder">
+      <DTS:VariableValue
+        DTS:DataType="8">d:\datatrax\log\</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Foreach FOLDER"
+      DTS:CreationName="STOCK:FOREACHLOOP"
+      DTS:Description="Foreach Loop Container"
+      DTS:DTSID="{4F017F14-F3D8-42C3-86B9-18476BB66CD3}"
+      DTS:ExecutableType="STOCK:FOREACHLOOP"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Foreach FOLDER">
+      <DTS:ForEachEnumerator
+        DTS:CreationName="Microsoft.ForEachItemEnumerator"
+        DTS:DTSID="{BCDAF0FB-7D94-4DC0-8B16-6B992BDAB520}"
+        DTS:ObjectName="{BCDAF0FB-7D94-4DC0-8B16-6B992BDAB520}">
+        <DTS:ObjectData>
+          <FEIEItems>
+            <FEIEItem>
+              <FEIEItemValue
+                Type="8"
+                Value="01" />
+            </FEIEItem>
+            <FEIEItem>
+              <FEIEItemValue
+                Type="8"
+                Value="02" />
+            </FEIEItem>
+            <FEIEItem>
+              <FEIEItemValue
+                Type="8"
+                Value="03" />
+            </FEIEItem>
+          </FEIEItems>
+        </DTS:ObjectData>
+      </DTS:ForEachEnumerator>
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Foreach FOLDER\Foreach SFTP log file"
+          DTS:CreationName="STOCK:FOREACHLOOP"
+          DTS:Description="Foreach Loop Container"
+          DTS:DTSID="{69FE2354-A8E3-4F1C-94AF-C1137D36EB38}"
+          DTS:ExecutableType="STOCK:FOREACHLOOP"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Foreach SFTP log file">
+          <DTS:ForEachEnumerator
+            DTS:CreationName="Microsoft.ForEachFileEnumerator"
+            DTS:DTSID="{E4F4E3FB-6F1D-4E7B-A4A0-BEE93F789875}"
+            DTS:ObjectName="{E4F4E3FB-6F1D-4E7B-A4A0-BEE93F789875}">
+            <DTS:PropertyExpression
+              DTS:Name="Directory">@[User::sftp_log_folder]</DTS:PropertyExpression>
+            <DTS:ObjectData>
+              <ForEachFileEnumeratorProperties>
+                <FEFEProperty
+                  Folder="d:\datatrax\xml\\sftplog\" />
+                <FEFEProperty
+                  FileSpec="*.*" />
+                <FEFEProperty
+                  FileNameRetrievalType="0" />
+                <FEFEProperty
+                  Recurse="0" />
+              </ForEachFileEnumeratorProperties>
+            </DTS:ObjectData>
+          </DTS:ForEachEnumerator>
+          <DTS:Variables />
+          <DTS:Executables>
+            <DTS:Executable
+              DTS:refId="Package\Foreach FOLDER\Foreach SFTP log file\copy_sftp_log_to_onedrive"
+              DTS:CreationName="Microsoft.FileSystemTask"
+              DTS:DelayValidation="True"
+              DTS:Description="File System Task"
+              DTS:DTSID="{BD704214-08AE-48E1-828D-C0C998E9B378}"
+              DTS:ExecutableType="Microsoft.FileSystemTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="copy_sftp_log_to_onedrive"
+              DTS:ThreadHint="0">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <FileSystemData
+                  TaskOverwriteDestFile="True"
+                  TaskSourcePath="User::log_file_name"
+                  TaskIsSourceVariable="True"
+                  TaskDestinationPath="User::destination_sfptlog_folder"
+                  TaskIsDestinationVariable="True" />
+              </DTS:ObjectData>
+            </DTS:Executable>
+          </DTS:Executables>
+          <DTS:ForEachVariableMappings>
+            <DTS:ForEachVariableMapping
+              DTS:CreationName=""
+              DTS:DTSID="{6CEA6F49-C37E-4222-AFB9-798A2AE4EA15}"
+              DTS:ObjectName="{6CEA6F49-C37E-4222-AFB9-798A2AE4EA15}"
+              DTS:ValueIndex="0"
+              DTS:VariableName="User::log_file_name" />
+          </DTS:ForEachVariableMappings>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:ForEachVariableMappings>
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{B0167A36-C221-4A79-8715-FF5CDB7F64C6}"
+          DTS:ObjectName="{B0167A36-C221-4A79-8715-FF5CDB7F64C6}"
+          DTS:ValueIndex="0"
+          DTS:VariableName="User::main_folder" />
+      </DTS:ForEachVariableMappings>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Foreach SSIS log file"
+      DTS:CreationName="STOCK:FOREACHLOOP"
+      DTS:Description="Foreach Loop Container"
+      DTS:DTSID="{E0021BC2-589E-4D6A-BAEF-BEC51CA90FE7}"
+      DTS:ExecutableType="STOCK:FOREACHLOOP"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Foreach SSIS log file">
+      <DTS:ForEachEnumerator
+        DTS:CreationName="Microsoft.ForEachFileEnumerator"
+        DTS:DTSID="{7A541B0A-FEE0-405A-9F87-BDBAC8E2D8A9}"
+        DTS:ObjectName="{7A541B0A-FEE0-405A-9F87-BDBAC8E2D8A9}">
+        <DTS:PropertyExpression
+          DTS:Name="Directory">@[User::ssis_log_folder]</DTS:PropertyExpression>
+        <DTS:ObjectData>
+          <ForEachFileEnumeratorProperties>
+            <FEFEProperty
+              Folder="d:\datatrax\log\" />
+            <FEFEProperty
+              FileSpec="*.log" />
+            <FEFEProperty
+              FileNameRetrievalType="0" />
+            <FEFEProperty
+              Recurse="0" />
+          </ForEachFileEnumeratorProperties>
+        </DTS:ObjectData>
+      </DTS:ForEachEnumerator>
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Foreach SSIS log file\copy_ssis_log_to_onedrive"
+          DTS:CreationName="Microsoft.FileSystemTask"
+          DTS:DelayValidation="True"
+          DTS:Description="File System Task"
+          DTS:DTSID="{F96A9124-6628-49FE-A973-10495B2765E9}"
+          DTS:ExecutableType="Microsoft.FileSystemTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="copy_ssis_log_to_onedrive"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <FileSystemData
+              TaskOverwriteDestFile="True"
+              TaskSourcePath="User::log_file_name"
+              TaskIsSourceVariable="True"
+              TaskDestinationPath="User::destination_log_folder"
+              TaskIsDestinationVariable="True" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:ForEachVariableMappings>
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{87A7BF76-6E96-4FAF-A14C-CB4F91C832E8}"
+          DTS:ObjectName="{87A7BF76-6E96-4FAF-A14C-CB4F91C832E8}"
+          DTS:ValueIndex="0"
+          DTS:VariableName="User::log_file_name" />
+      </DTS:ForEachVariableMappings>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{831ED5C4-3008-44BF-886C-774FA2A03380}"
+      DTS:From="Package\Foreach SSIS log file"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Foreach FOLDER" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="206,42"
+          Id="Package\Foreach FOLDER\Foreach SFTP log file\copy_sftp_log_to_onedrive"
+          TopLeft="5.5,5.5" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="217,102"
+          Size="217,146"
+          Id="Package\Foreach FOLDER\Foreach SFTP log file"
+          TopLeft="5.50000000000003,5.5" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="228,206"
+          Size="228,250"
+          Id="Package\Foreach FOLDER"
+          TopLeft="116.5,211.5" />
+        <AnnotationLayout
+          Text="task"
+          ParentId="Package"
+          FontInfo="{assembly:Null}"
+          Size="50,60"
+          Id="a4424442-f0ad-4a55-afa7-9e8715dc2bcc"
+          TopLeft="5.50000000000003,306.5" />
+        <NodeLayout
+          Size="205,42"
+          Id="Package\Foreach SSIS log file\copy_ssis_log_to_onedrive"
+          TopLeft="5.5,5.5" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="216,102"
+          Size="216,145"
+          Id="Package\Foreach SSIS log file"
+          TopLeft="122.5,5.5" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="230.5,150.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,61"
+              Start="0,0"
+              End="0,53.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,53.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

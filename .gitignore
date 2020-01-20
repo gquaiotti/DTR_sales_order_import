@@ -1,0 +1,4 @@
+*.log
+/ssis/datatrax_xml_import/obj/
+/ssis/datatrax_xml_import/bin/
+/config/
